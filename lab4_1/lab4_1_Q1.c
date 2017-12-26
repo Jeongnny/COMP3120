@@ -9,15 +9,17 @@ int main(void) {
 	if(pid < 0){		//fork error	
 	}
 	else if(pid == 0) {	//child process
-		printf("[child process] x = %d", x);
+		printf("[child process] x = %d\n", x);
 		x = x + 5;
-		printf("[child process] x + 5 = %d", x);
+		printf("[child process] x + 5 = %d\n", x);
 	}
 	else{			//parent process
-		printf("[parent process] x = %d", x);
+		printf("[parent process] x = %d\n", x);
 		x = x + 10;
-		printf("[parent process] x + 10 = %d", x);
+		printf("[parent process] x + 10 = %d\n", x);
 	}
 	
+	printf("result x = %d\n", x);
+
 	return 0;
 }
